@@ -1,30 +1,37 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, ScrollView } from 'react-native';
 
 function HomeScreen() {
   return (
-    <View style={styles.container}>
-      <Image source={{uri: 'https://example.com/logo.png'}} style={styles.logo} />
+    <ScrollView contentContainerStyle={styles.container}>
+      <Image
+        source={require('./assets/logo_sipat.png')} // Caminho correto para a imagem
+        style={styles.logo}
+      />
       <Text style={styles.title}>Bem-vindo à SIPAT 2024!</Text>
       <Text style={styles.subtitle}>Semana Interna de Prevenção de Acidentes do Trabalho</Text>
+      <Image
+        source={{uri: 'https://example.com/safety_image.jpg'}}
+        style={styles.image}
+      />
       <Text style={styles.content}>
         Participe das nossas palestras, treinamentos e atividades que promovem a segurança e o bem-estar no ambiente de trabalho.
       </Text>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexGrow: 1,
     justifyContent: 'center',
     alignItems: 'center',
     padding: 20,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F5F5F5',
   },
   logo: {
-    width: 150,
-    height: 150,
+    width: 200,
+    height: 200,
     marginBottom: 20,
   },
   title: {
@@ -32,11 +39,17 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: '#4CAF50',
     marginBottom: 10,
+    textAlign: 'center',
   },
   subtitle: {
     fontSize: 18,
     color: '#333333',
     textAlign: 'center',
+    marginBottom: 20,
+  },
+  image: {
+    width: '100%',
+    height: 200,
     marginBottom: 20,
   },
   content: {

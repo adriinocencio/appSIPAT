@@ -21,11 +21,11 @@ function App() {
 
             if (route.name === 'Home') {
               iconName = 'home-outline';
-            } else if (route.name === 'Programação') {
+            } else if (route.name === 'Schedule') {
               iconName = 'calendar-outline';
             } else if (route.name === 'Notifications') {
               iconName = 'notifications-outline';
-            } else if (route.name === 'Dicas de Segurança') {
+            } else if (route.name === 'SafetyTips') {
               iconName = 'shield-outline';
             }
 
@@ -33,14 +33,24 @@ function App() {
           },
         })}
         tabBarOptions={{
-          activeTintColor: 'tomato',
+          activeTintColor: '#4CAF50', // Verde vibrante
           inactiveTintColor: 'gray',
+          style: {
+            backgroundColor: '#fff',
+            borderTopWidth: 0,
+            elevation: 10,
+            height: 60,
+          },
+          labelStyle: {
+            fontSize: 12,
+            marginBottom: 5,
+          },
         }}
       >
         <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Programação" component={ScheduleScreen} />
+        <Tab.Screen name="Schedule" component={ScheduleScreen} />
         <Tab.Screen name="Notifications" component={NotificationsScreen} />
-        <Tab.Screen name="Dicas de Segurança" component={SafetyTipsScreen} />
+        <Tab.Screen name="SafetyTips" component={SafetyTipsScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );

@@ -21,7 +21,7 @@ function NotificationsScreen() {
 const styles = StyleSheet.create({
   container: {
     padding: 20,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: '#F5F5F5',
   },
   title: {
     fontSize: 24,
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   notification: {
     marginBottom: 20,
     padding: 15,
-    backgroundColor: '#f9f9f9',
+    backgroundColor: '#FFFFFF',
     borderRadius: 10,
     borderWidth: 1,
     borderColor: '#ddd',
@@ -42,6 +42,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#333',
+    marginBottom: 5,
   },
   notificationDetails: {
     fontSize: 16,
